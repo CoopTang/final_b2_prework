@@ -1,0 +1,9 @@
+<section id='student-info'>
+  <p><%= "Name: #{@student.name}" %></p>
+</section>
+
+<% @student.student_courses.each do |student_course| %>
+  <section id='course-<%= student_course.course.id %>'>
+    <p><%= "#{student_course.course.name}: #{student_course.grade}" %></p>
+  </section>
+<% end %>
